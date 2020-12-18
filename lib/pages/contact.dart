@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/services/url_launcher.dart';
-import 'package:portofolio/widgets/background.dart';
-import 'package:portofolio/widgets/custom_appbar.dart';
+import 'package:portofolio/widgets/app%20bar/custom_appbar.dart';
+import 'package:portofolio/widgets/background/background.dart';
 
 class Contact extends StatelessWidget {
   static const id = '/contact';
@@ -13,7 +13,8 @@ class Contact extends StatelessWidget {
         children: [
           Background(
             screenSize: screenSize,
-            assetPath: 'assets/images/contact background.jpg',
+            assetPath:
+                'https://firebasestorage.googleapis.com/v0/b/fir-demo-a9015.appspot.com/o/contact%20background-min.jpg?alt=media&token=5926dd9b-fda3-4a55-a4cf-de8095eb44ff',
           ),
           Container(
             padding: EdgeInsets.all(40.0),

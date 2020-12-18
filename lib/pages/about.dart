@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio/widgets/background.dart';
-import 'package:portofolio/widgets/custom_appbar.dart';
-import 'package:portofolio/widgets/tools_item_detail.dart';
+import 'package:portofolio/widgets/app%20bar/custom_appbar.dart';
+import 'package:portofolio/widgets/background/background.dart';
+import 'package:portofolio/widgets/tools%20item%20card/tools_item_detail.dart';
 
 class About extends StatelessWidget {
   static const id = '/about';
@@ -13,7 +13,8 @@ class About extends StatelessWidget {
         children: [
           Background(
             screenSize: screenSize,
-            assetPath: 'assets/images/about background.jpg',
+            assetPath:
+                'https://firebasestorage.googleapis.com/v0/b/fir-demo-a9015.appspot.com/o/about%20background-min.jpg?alt=media&token=1b8f29e4-fdfc-46e0-b497-3c7f70d2e544',
           ),
           Container(
             padding: EdgeInsets.all(40.0),
