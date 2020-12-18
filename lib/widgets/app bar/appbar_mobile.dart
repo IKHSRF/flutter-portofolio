@@ -59,7 +59,7 @@ class CustomAppBarMobile extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Get.toNamed(About.id);
+                        Get.toNamed(HomePage.id);
                       },
                       child: Text(
                         'Home',
@@ -70,6 +70,7 @@ class CustomAppBarMobile extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(height: 30.0),
                     GestureDetector(
                       onTap: () {
                         Get.toNamed(About.id);
