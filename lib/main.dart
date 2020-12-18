@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      title: 'Ikhsan Arfian',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Montserrat Alternates'),
       initialRoute: HomePage.id,
