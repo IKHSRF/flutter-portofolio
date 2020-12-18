@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portofolio/pages/about.dart';
+import 'package:portofolio/pages/contact.dart';
 import 'package:portofolio/pages/home.dart';
+import 'package:portofolio/pages/project.dart';
 
 class CustomAppBarMobile extends StatelessWidget {
   const CustomAppBarMobile({
@@ -8,10 +11,12 @@ class CustomAppBarMobile extends StatelessWidget {
     this.isAbout = false,
     this.isProject = false,
     this.isContact = false,
+    this.isHome = false,
   }) : super(key: key);
   final bool isAbout;
   final bool isProject;
   final bool isContact;
+  final bool isHome;
 
   @override
   Widget build(BuildContext context) {
@@ -52,30 +57,58 @@ class CustomAppBarMobile extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      'About Me',
-                      style: TextStyle(
-                        color: isAbout ? Colors.blue : Colors.black,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 25.0,
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(About.id);
+                      },
+                      child: Text(
+                        'Home',
+                        style: TextStyle(
+                          color: isHome ? Colors.blue : Colors.black,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 25.0,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(About.id);
+                      },
+                      child: Text(
+                        'About Me',
+                        style: TextStyle(
+                          color: isAbout ? Colors.blue : Colors.black,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 25.0,
+                        ),
                       ),
                     ),
                     SizedBox(height: 30.0),
-                    Text(
-                      'Project',
-                      style: TextStyle(
-                        color: isProject ? Colors.blue : Colors.black,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 25.0,
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(Project.id);
+                      },
+                      child: Text(
+                        'Project',
+                        style: TextStyle(
+                          color: isProject ? Colors.blue : Colors.black,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 25.0,
+                        ),
                       ),
                     ),
                     SizedBox(height: 30.0),
-                    Text(
-                      'Contact',
-                      style: TextStyle(
-                        color: isContact ? Colors.blue : Colors.black,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 25.0,
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(Contact.id);
+                      },
+                      child: Text(
+                        'Contact',
+                        style: TextStyle(
+                          color: isContact ? Colors.blue : Colors.black,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 25.0,
+                        ),
                       ),
                     ),
                   ],

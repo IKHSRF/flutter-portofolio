@@ -27,7 +27,9 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.all(40.0),
                 child: Column(
                   children: [
-                    CustomAppBar(),
+                    CustomAppBar(
+                      isHome: true,
+                    ),
                     Spacer(),
                     Container(
                       padding: EdgeInsets.only(left: 25.0),

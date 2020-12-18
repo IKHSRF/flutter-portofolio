@@ -10,10 +10,12 @@ class CustomAppBar extends StatelessWidget {
     this.isAbout = false,
     this.isProject = false,
     this.isContact = false,
+    this.isHome = false,
   }) : super(key: key);
   final bool isAbout;
   final bool isProject;
   final bool isContact;
+  final bool isHome;
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +24,13 @@ class CustomAppBar extends StatelessWidget {
         isAbout: isAbout,
         isProject: isProject,
         isContact: isContact,
+        isHome: isHome,
       ),
       tablet: CustomAppBarMobile(
         isAbout: isAbout,
         isProject: isProject,
         isContact: isContact,
+        isHome: isHome,
       ),
       desktop: CustomAppBarDesktop(
         isAbout: isAbout,
