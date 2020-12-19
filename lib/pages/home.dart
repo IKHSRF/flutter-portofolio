@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
                 'https://firebasestorage.googleapis.com/v0/b/fir-demo-a9015.appspot.com/o/homepage%20background-min.jpg?alt=media&token=cf431f90-1203-4925-a00f-81441286e3b2',
           ),
           ResponsiveBuilder(
-            builder: (context, sizinInformation) {
+            builder: (context, sizingInformation) {
               return Container(
                 padding: EdgeInsets.all(40.0),
                 child: Column(
@@ -32,7 +32,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Spacer(),
                     Container(
-                      padding: EdgeInsets.only(left: 25.0),
+                      padding: sizingInformation.isMobile
+                          ? null
+                          : EdgeInsets.only(left: 20.0),
                       width: screenSize.width,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +44,8 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w800,
-                              fontSize: sizinInformation.isMobile ? 40.0 : 50.0,
+                              fontSize:
+                                  sizingInformation.isMobile ? 35.0 : 50.0,
                             ),
                           ),
                           SizedBox(
@@ -53,7 +56,8 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
-                              fontSize: sizinInformation.isMobile ? 20.0 : 30.0,
+                              fontSize:
+                                  sizingInformation.isMobile ? 20.0 : 30.0,
                             ),
                           )
                         ],

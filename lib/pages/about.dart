@@ -20,7 +20,7 @@ class About extends StatelessWidget {
           ResponsiveBuilder(
             builder: (context, sizingInformation) {
               return Container(
-                padding: EdgeInsets.fromLTRB(40.0, 40.0, 0, 40.0),
+                padding: EdgeInsets.fromLTRB(40.0, 40.0, 0, 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -32,7 +32,9 @@ class About extends StatelessWidget {
                     ),
                     Spacer(),
                     Container(
-                      padding: EdgeInsets.only(left: 20.0),
+                      padding: sizingInformation.isMobile
+                          ? null
+                          : EdgeInsets.only(left: 20.0),
                       child: Text(
                         'I am Mobile Developer\nI have experienced with android\napp development using flutter',
                         style: TextStyle(
@@ -48,120 +50,16 @@ class About extends StatelessWidget {
                     ),
                     Spacer(),
                     Container(
-                      padding: EdgeInsets.only(left: 20.0, right: 20.0),
+                      padding: sizingInformation.isMobile
+                          ? null
+                          : EdgeInsets.only(left: 20.0, right: 20.0),
                       child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Tools & Technology',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: sizingInformation.isMobile
-                                        ? 15.0
-                                        : sizingInformation.isTablet
-                                            ? 20.0
-                                            : 30.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                SizedBox(height: 50.0),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Tools(
-                                          technologyName: 'Firebase',
-                                        ),
-                                        Tools(
-                                          technologyName: 'Dart',
-                                        ),
-                                        Tools(
-                                          technologyName: 'Flutter',
-                                        ),
-                                      ],
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Tools(
-                                          technologyName: 'Git',
-                                        ),
-                                        Tools(
-                                          technologyName: 'Kotlin',
-                                        ),
-                                        Tools(
-                                          technologyName: 'Node.js',
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            SizedBox(width: screenSize.width * 0.06),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Other & Interpersonal Skills',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: sizingInformation.isMobile
-                                        ? 15.0
-                                        : sizingInformation.isTablet
-                                            ? 20.0
-                                            : 30.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                SizedBox(height: 50.0),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Tools(
-                                          technologyName: 'Public Speaking',
-                                        ),
-                                        Tools(
-                                          technologyName: 'Team Work',
-                                        ),
-                                        Tools(
-                                          technologyName: 'Leadership',
-                                        ),
-                                      ],
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Tools(
-                                          technologyName: 'Adobe XD',
-                                        ),
-                                        Tools(
-                                          technologyName: 'Figma',
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                        scrollDirection: sizingInformation.isMobile
+                            ? Axis.vertical
+                            : Axis.horizontal,
+                        child: sizingInformation.isMobile
+                            ? MobileTools(screenSize: screenSize)
+                            : DesktopTools(screenSize: screenSize),
                       ),
                     ),
                     Spacer(),
@@ -172,6 +70,257 @@ class About extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class DesktopTools extends StatelessWidget {
+  const DesktopTools({
+    Key key,
+    @required this.screenSize,
+  }) : super(key: key);
+
+  final Size screenSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveBuilder(
+      builder: (context, sizingInformation) {
+        return Row(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Tools & Technology',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: sizingInformation.isMobile
+                        ? 15.0
+                        : sizingInformation.isTablet
+                            ? 20.0
+                            : 30.0,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                SizedBox(height: 50.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Tools(
+                          technologyName: 'Firebase',
+                        ),
+                        Tools(
+                          technologyName: 'Dart',
+                        ),
+                        Tools(
+                          technologyName: 'Flutter',
+                        ),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Tools(
+                          technologyName: 'Git',
+                        ),
+                        Tools(
+                          technologyName: 'Kotlin',
+                        ),
+                        Tools(
+                          technologyName: 'Node.js',
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(width: screenSize.width * 0.06),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Other & Interpersonal Skills',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: sizingInformation.isMobile
+                        ? 15.0
+                        : sizingInformation.isTablet
+                            ? 20.0
+                            : 30.0,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                SizedBox(height: 50.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Tools(
+                          technologyName: 'Public Speaking',
+                        ),
+                        Tools(
+                          technologyName: 'Team Work',
+                        ),
+                        Tools(
+                          technologyName: 'Leadership',
+                        ),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Tools(
+                          technologyName: 'Adobe XD',
+                        ),
+                        Tools(
+                          technologyName: 'Figma',
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
+class MobileTools extends StatelessWidget {
+  const MobileTools({
+    Key key,
+    @required this.screenSize,
+  }) : super(key: key);
+
+  final Size screenSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveBuilder(
+      builder: (context, sizingInformation) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              width: screenSize.width * 0.5,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Tools & Technology',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: sizingInformation.isMobile
+                          ? 15.0
+                          : sizingInformation.isTablet
+                              ? 20.0
+                              : 30.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 20.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Tools(
+                            technologyName: 'Firebase',
+                          ),
+                          Tools(
+                            technologyName: 'Dart',
+                          ),
+                          Tools(
+                            technologyName: 'Flutter',
+                          ),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Tools(
+                            technologyName: 'Git',
+                          ),
+                          Tools(
+                            technologyName: 'Kotlin',
+                          ),
+                          Tools(
+                            technologyName: 'Node.js',
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: screenSize.width * 0.1),
+            Container(
+              width: screenSize.width * 0.7,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Other & Interpersonal Skills',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: sizingInformation.isMobile
+                          ? 15.0
+                          : sizingInformation.isTablet
+                              ? 20.0
+                              : 30.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 20.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Tools(
+                            technologyName: 'Public Speaking',
+                          ),
+                          Tools(
+                            technologyName: 'Team Work',
+                          ),
+                          Tools(
+                            technologyName: 'Leadership',
+                          ),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Tools(
+                            technologyName: 'Adobe XD',
+                          ),
+                          Tools(
+                            technologyName: 'Figma',
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

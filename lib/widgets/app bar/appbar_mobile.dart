@@ -31,7 +31,7 @@ class CustomAppBarMobile extends StatelessWidget {
             'Ikhsan Arfian',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 28,
+              fontSize: 25,
               fontWeight: FontWeight.w700,
             ),
           ),
