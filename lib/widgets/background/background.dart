@@ -22,11 +22,6 @@ class Background extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        Container(
-          width: screenSize.width,
-          height: screenSize.height,
-          color: Colors.black.withOpacity(0.2),
-        ),
       ],
     );
   }

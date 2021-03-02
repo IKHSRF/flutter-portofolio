@@ -36,7 +36,7 @@ class CustomAppBarDesktop extends StatelessWidget {
         Spacer(),
         ClipRRect(
           borderRadius: BorderRadius.circular(20.0),
-          child: FlatButton(
+          child: TextButton(
             onPressed: () {
               Get.toNamed(About.id);
             },
@@ -64,7 +64,7 @@ class CustomAppBarDesktop extends StatelessWidget {
         ),
         ClipRRect(
           borderRadius: BorderRadius.circular(20.0),
-          child: FlatButton(
+          child: TextButton(
             onPressed: () {
               Get.toNamed(Project.id);
             },
@@ -92,7 +92,7 @@ class CustomAppBarDesktop extends StatelessWidget {
         ),
         ClipRRect(
           borderRadius: BorderRadius.circular(20.0),
-          child: FlatButton(
+          child: TextButton(
             onPressed: () {
               Get.toNamed(Contact.id);
             },

@@ -4,8 +4,10 @@ import 'package:portofolio/pages/about.dart';
 import 'package:portofolio/pages/contact.dart';
 import 'package:portofolio/pages/home.dart';
 import 'package:portofolio/pages/project.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(MyApp());
 }
 
