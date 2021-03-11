@@ -64,7 +64,7 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                         children: [
                           ProjectCard(
                             screenSize: screenSize,
-                            projectCategory: 'Mobile App',
+                            projectCategory: 'Flutter',
                             projectIconPath: 'assets/icons/ngabolang.png',
                             projectName: 'Ngabolang',
                             projectUrl:
@@ -72,7 +72,23 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                           ),
                           ProjectCard(
                             screenSize: screenSize,
-                            projectCategory: 'Mobile App',
+                            projectCategory: 'Flutter',
+                            projectIconPath: 'assets/icons/flutter.png',
+                            projectName: 'Prawitama Care',
+                            projectUrl:
+                                'https://github.com/TjandraD/crowdfunding-web',
+                          ),
+                          ProjectCard(
+                            screenSize: screenSize,
+                            projectCategory: 'Laravel',
+                            projectIconPath: 'assets/icons/laravel.png',
+                            projectName: 'Geometry Calculator',
+                            projectUrl:
+                                'https://github.com/IKHSRF/geometry_calculator',
+                          ),
+                          ProjectCard(
+                            screenSize: screenSize,
+                            projectCategory: 'Flutter',
                             projectIconPath: 'assets/icons/delivery app.png',
                             projectName: 'Delivery App',
                             projectUrl:
@@ -80,7 +96,15 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                           ),
                           ProjectCard(
                             screenSize: screenSize,
-                            projectCategory: 'UI UX',
+                            projectCategory: 'Flutter',
+                            projectIconPath: 'assets/icons/flutter.png',
+                            projectName: 'Flutter Portfolio',
+                            projectUrl:
+                                'https://github.com/IKHSRF/flutter-portofolio',
+                          ),
+                          ProjectCard(
+                            screenSize: screenSize,
+                            projectCategory: 'Flutter',
                             projectIconPath: 'assets/icons/meditation.png',
                             projectName: 'Meditation',
                             projectUrl:
@@ -88,14 +112,14 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                           ),
                           ProjectCard(
                             screenSize: screenSize,
-                            projectCategory: 'Mobile App',
+                            projectCategory: 'Flutter',
                             projectIconPath: 'assets/icons/flutter.png',
                             projectName: 'POS',
                             projectUrl: 'https://github.com/IKHSRF/pos-flutter',
                           ),
                           ProjectCard(
                             screenSize: screenSize,
-                            projectCategory: 'Mobile App',
+                            projectCategory: 'Flutter',
                             projectIconPath: 'assets/icons/flutter.png',
                             projectName: 'Joke App',
                             projectUrl: 'https://github.com/IKHSRF/joke_app',

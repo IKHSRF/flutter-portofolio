@@ -47,6 +47,7 @@ class ProjectCard extends StatelessWidget {
               children: [
                 Image.asset(
                   projectIconPath,
+                  fit: BoxFit.fill,
                   height: sizingInformation.isMobile
                       ? 50.0
                       : sizingInformation.isTablet

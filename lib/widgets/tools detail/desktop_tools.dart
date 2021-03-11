@@ -49,6 +49,7 @@ class DesktopTools extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(width: 20),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -102,6 +103,7 @@ class DesktopTools extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(width: 20),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
