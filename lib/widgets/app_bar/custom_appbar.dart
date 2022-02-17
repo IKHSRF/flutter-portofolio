@@ -1,12 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:portofolio/widgets/app%20bar/appbar_desktop.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-
-import 'appbar_mobile.dart';
+part of '../widgets.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
-    Key key,
+    Key? key,
     this.isAbout = false,
     this.isProject = false,
     this.isContact = false,

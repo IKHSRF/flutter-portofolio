@@ -1,12 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:portofolio/services/url_launcher.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+part of '../widgets.dart';
 
 class SocialMediaButton extends StatelessWidget {
   const SocialMediaButton({
-    Key key,
-    @required this.socialUrl,
-    @required this.socialIconPath,
+    Key? key,
+    required this.socialUrl,
+    required this.socialIconPath,
     this.width = 40.0,
     this.height = 40.0,
   }) : super(key: key);

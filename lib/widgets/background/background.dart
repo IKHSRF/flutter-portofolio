@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
+part of '../widgets.dart';
 
 class Background extends StatelessWidget {
   const Background({
-    Key key,
-    @required this.screenSize,
-    @required this.assetPath,
+    Key? key,
+    required this.screenSize,
+    required this.assetPath,
   }) : super(key: key);
 
   final Size screenSize;

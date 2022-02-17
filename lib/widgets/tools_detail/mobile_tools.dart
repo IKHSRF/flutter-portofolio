@@ -1,11 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:portofolio/widgets/tools%20item%20card/tools_item_detail.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+part of '../widgets.dart';
 
 class MobileTools extends StatelessWidget {
   const MobileTools({
-    Key key,
-    @required this.screenSize,
+    Key? key,
+    required this.screenSize,
   }) : super(key: key);
 
   final Size screenSize;

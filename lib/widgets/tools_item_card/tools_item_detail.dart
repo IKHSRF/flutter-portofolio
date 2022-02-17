@@ -1,11 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+part of '../widgets.dart';
 
 class Tools extends StatelessWidget {
   const Tools({
-    Key key,
-    this.assetPath,
-    @required this.technologyName,
+    Key? key,
+    this.assetPath = "",
+    required this.technologyName,
   }) : super(key: key);
 
   final String assetPath;

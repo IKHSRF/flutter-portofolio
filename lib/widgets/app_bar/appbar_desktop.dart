@@ -1,13 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:portofolio/pages/about.dart';
-import 'package:portofolio/pages/contact.dart';
-import 'package:portofolio/pages/home.dart';
-import 'package:portofolio/pages/project.dart';
+part of '../widgets.dart';
 
 class CustomAppBarDesktop extends StatelessWidget {
   const CustomAppBarDesktop({
-    Key key,
+    Key? key,
     this.isAbout = false,
     this.isProject = false,
     this.isContact = false,
@@ -22,7 +17,7 @@ class CustomAppBarDesktop extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Get.toNamed(HomePage.id);
+            Modular.to.pushNamed('/');
           },
           child: Text(
             'Ikhsan Arfian',
@@ -38,7 +33,7 @@ class CustomAppBarDesktop extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.0),
           child: TextButton(
             onPressed: () {
-              Get.toNamed(About.id);
+              Modular.to.pushNamed('/about');
             },
             child: Container(
               width: 180,
@@ -66,7 +61,7 @@ class CustomAppBarDesktop extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.0),
           child: TextButton(
             onPressed: () {
-              Get.toNamed(Project.id);
+              Modular.to.pushNamed('/project');
             },
             child: Container(
               width: 160,
@@ -94,7 +89,7 @@ class CustomAppBarDesktop extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.0),
           child: TextButton(
             onPressed: () {
-              Get.toNamed(Contact.id);
+              Modular.to.pushNamed('/contact');
             },
             child: Container(
               width: 160,
