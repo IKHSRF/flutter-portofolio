@@ -1,6 +1,4 @@
-# Web Portfolio
-## Web portfolio built with flutter 
-## You can check the website on ikhsanarfian.com
+A web portfolio is a collection of the work of an developer to show a collection of products, projects or other works that have been made before.
 
 ![home](https://user-images.githubusercontent.com/55071684/109654564-e575a200-7b94-11eb-899b-7e567a2e8e99.PNG)
 ![about me](https://user-images.githubusercontent.com/55071684/109654532-de4e9400-7b94-11eb-82c2-fd53c23e5732.PNG)
