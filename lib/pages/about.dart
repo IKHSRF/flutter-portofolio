@@ -29,7 +29,7 @@ class About extends StatelessWidget {
                           ? EdgeInsets.only(left: 0, right: 0)
                           : EdgeInsets.only(left: 20.0),
                       child: Text(
-                        'I am Mobile Developer\nI have experienced with mobile\napp development using flutter & kotlin',
+                        'I am Mobile Developer\nI have experienced with mobile\napp development',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w800,

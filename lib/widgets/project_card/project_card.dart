@@ -35,17 +35,12 @@ class ProjectCard extends StatelessWidget {
                 : sizingInformation.isTablet
                     ? screenSize.width * 0.27
                     : screenSize.width * 0.2,
-            height: sizingInformation.isMobile
-                ? screenSize.height * 0.27
-                : sizingInformation.isTablet
-                    ? screenSize.height * 0.2
-                    : screenSize.height * 0.25,
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.21),
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(

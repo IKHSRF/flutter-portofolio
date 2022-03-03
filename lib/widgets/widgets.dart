@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portofolio/services/url_launcher.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 

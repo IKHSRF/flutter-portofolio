@@ -6,7 +6,7 @@ class Url {
       await launch(
         url,
         forceSafariVC: true,
-        forceWebView: true,
+        forceWebView: false,
       );
     } else {
       throw 'Could not launch $url';
